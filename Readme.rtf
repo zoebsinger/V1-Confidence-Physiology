@@ -1,63 +1,36 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2761
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 HelveticaNeue-Italic;
-}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid3\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid1}
-{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid102\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid103\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid2}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
-\margl1440\margr1440\vieww24040\viewh18900\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+Boundy-Singer et al 2025 Read Me
 
-\f0\b\fs24 \cf0 Boundy-Singer et al 2025 Read Me
-\f1\b0 \
-\
-You will need to change the path set by \'91user\'92 at the top of each script.\
-\
+You will need to change the path set by ‘user’ at the top of each script.
 
-\f2\i Scripts:
-\f1\i0 \
-Scripts are labeled by their associated paper figure (fig1.m etc.) and contain code to generate paper figures and associated analyses and statistics \
-\
+Scripts:
+Scripts are labeled by their associated paper figure (fig1.m etc.) and contain code to generate paper figures and associated analyses and statistics 
 
-\f2\i Data:
-\f1\i0 \
-Data is saved in /Structures/ folder\
-\
-/Behavior/ contains:\
-/Monkey/\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}masterBehaviorStruct.mat - all behavioral sessions including recordings. This contains all behavior-specific analyses. Relevant behavioral data from recording sessions is also saved in masterNeuralStruct.mat. Each cell (i.e masterBehaviorStruct\{n\}) contains data from session n. Relevant info (e.g subject ID, if session was a recording sessions, descriptive labels/indices) are contained within the structure). \
-\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}crossBlock - cross subject/date summary statistics and full CASANDRE model fit parameters for easy access\
-{\listtext	\uc0\u8259 	}.trials - data from trialMatrix sorted for CASADRE fitting. Each cell (e.g \{1\}\{n\}) contains data sorted according to labels in .taskNames (e.g full, block 1, block 2., etc). Organization is as follows:  .trials\{1\}\{n\}\{r\} where n is the type of data sort described in .task names and where r is reliability level (contrast). In the resulting matrix, column 1 = correct side (CCW = -1/ CW = 1), column 2= stimulus orientation in deg, column 3 = observer response and confidence (- = CCW/ + = CW / 2 = High confidence , 1 = Low confidence), column 4 = trial number as presented\
-{\listtext	\uc0\u8259 	}.sessionStruct  \
-\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
-\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}.trialMatrix - contains full trial matrix (n trials x y columns) with single trials details. \
-{\listtext	\uc0\u8259 	}.trialmatrix_description  - description of columns of trialMatrix\
-{\listtext	\uc0\u8259 	}.trialmatrix_index - index for columns in trialMatrix \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 /Human/\
-	masterBehaviorStruct_Human.mat - contains behavioral data and behavioral fits and summary statistics from 19 human observers. Same conventions as monkey behavioral data except each 	cell is a unique human observer in seas of unique session\
-\
-/Neural/ contains:\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}masterDecodeStruct.mat - contains neural data with cell n referring to an individual recording session.\
-\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls2\ilvl1\cf0 {\listtext	\uc0\u8259 	}.dataStructTask - contains stimulus information and neural data. \
-\pard\tx1660\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li2160\fi-2160\pardirnatural\partightenfactor0
-\ls2\ilvl2\cf0 {\listtext	\uc0\u8259 	}.POST_STIM_INTERVAL and .PRE_STIM_INTERVAL give the windows of time in .unit_spike_times in seconds.spikes counts in \
-{\listtext	\uc0\u8259 	}.stimulus_spikeCounts_wExclusion which takes replaces periods in which units responses deviate from z-scored responses in pre- and post- behavioral sessions basic characterization.\
-\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
-\ls2\ilvl1\cf0 {\listtext	\uc0\u8259 	}.expt - contains the session date \
-{\listtext	\uc0\u8259 	}.behavior - duplicate of trialMatrix found in masterBehaviorStruct.mat\
-\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}decodeSumary_L.mat - linear stimulus/ choice/ confidence decoding\
-{\listtext	\uc0\u8226 	}decodeSumary_NL.mat - non-linear stimulus/ choice/ confidence decoding and summary statistics\
-{\listtext	\uc0\u8226 	}/CSV/ - contains .csv files for the simulated gain experiment in figure 3\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-\
-\
-Please contact zbsinger@mit.edu with any questions\
-}
+Data:
+Data is saved in /Structures/ folder
+
+/Behavior/ contains:
+/Monkey/
+	•	masterBehaviorStruct.mat - all behavioral sessions including recordings. This contains all behavior-specific analyses. Relevant behavioral data from recording sessions is also saved in masterNeuralStruct.mat. Each cell (i.e masterBehaviorStruct{n}) contains data from session n. Relevant info (e.g subject ID, if session was a recording sessions, descriptive labels/indices) are contained within the structure). 
+	⁃	crossBlock - cross subject/date summary statistics and full CASANDRE model fit parameters for easy access
+	⁃	.trials - data from trialMatrix sorted for CASADRE fitting. Each cell (e.g {1}{n}) contains data sorted according to labels in .taskNames (e.g full, block 1, block 2., etc). Organization is as follows:  .trials{1}{n}{r} where n is the type of data sort described in .task names and where r is reliability level (contrast). In the resulting matrix, column 1 = correct side (CCW = -1/ CW = 1), column 2= stimulus orientation in deg, column 3 = observer response and confidence (- = CCW/ + = CW / 2 = High confidence , 1 = Low confidence), column 4 = trial number as presented
+	⁃	.sessionStruct  
+	⁃	.trialMatrix - contains full trial matrix (n trials x y columns) with single trials details. 
+	⁃	.trialmatrix_description  - description of columns of trialMatrix
+	⁃	.trialmatrix_index - index for columns in trialMatrix 
+/Human/
+	masterBehaviorStruct_Human.mat - contains behavioral data and behavioral fits and summary statistics from 19 human observers. Same conventions as monkey behavioral data except each 	cell is a unique human observer in seas of unique session
+
+/Neural/ contains:
+	•	masterDecodeStruct.mat - contains neural data with cell n referring to an individual recording session.
+	⁃	.dataStructTask - contains stimulus information and neural data. 
+	⁃	.POST_STIM_INTERVAL and .PRE_STIM_INTERVAL give the windows of time in .unit_spike_times in seconds.spikes counts in 
+	⁃	.stimulus_spikeCounts_wExclusion which takes replaces periods in which units responses deviate from z-scored responses in pre- and post- behavioral sessions basic characterization.
+	⁃	.expt - contains the session date 
+	⁃	.behavior - duplicate of trialMatrix found in masterBehaviorStruct.mat
+	•	decodeSumary_L.mat - linear stimulus/ choice/ confidence decoding
+	•	decodeSumary_NL.mat - non-linear stimulus/ choice/ confidence decoding and summary statistics
+	•	/CSV/ - contains .csv files for the simulated gain experiment in figure 3
+
+
+
+Please contact zbsinger@mit.edu with any questions
